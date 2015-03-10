@@ -220,7 +220,7 @@ perform_delete();
 
 
 //Download
- $("#page-builder-sidebar-buttons-abutton").click(function(){
+ $("#page-builder-area-center-frame-buttons-save a").click(function(){
 	 
 	$("#page-preloaded-export").html($("#page-builder-area-center-frame-content").html());
 	$("#page-preloaded-export .pb-row-delete").remove();
@@ -229,46 +229,11 @@ perform_delete();
 	$("#page-preloaded-export .pb-row-edit").removeClass("pb-row-edit");
 	
 	export_content = $("#page-preloaded-export").html();
-	
-	$("#export-textarea").val(export_content)
+	document.getElementById("export-textarea").value = export_content;
 	$( "#export-form" ).submit();
 	$("#export-textarea").val(' ');
 	 
 });
 	 
-	 
-//Export 
-$("#page-builder-sidebar-buttons-bbutton").click(function(){
-	
-	$("#pb-edit-export").fadeIn(500);
-	$("#pb-edit-export .pb-edit-box").slideDown(500);
-	
-	$("#page-preloaded-export").html($("#page-builder-area-center-frame-content").html());
-	$("#page-preloaded-export .pb-row-delete").remove();
-	$("#page-preloaded-export .pb-row").removeClass("ui-draggable");
-	$("#page-preloaded-export .pb-row-edit").removeAttr("data-type");
-	$("#page-preloaded-export .pb-row-edit").removeClass("pb-row-edit");
-	
-	preload_export_html = $("#page-preloaded-export").html();
-	$.ajax({
-	  url: "_css/page.css"
-	}).done(function(data) {
-
-	
-export_content = '<style>'+data+'</style><link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic" rel="stylesheet" type="text/css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><div id="pb-wrapper"><div id="pb-wrapper-page">'+preload_export_html+'</div></div>';
-	
-	$("#pb-edit-export .text").val(export_content);
-	
-	
-	});
-	
-	
-	
-	$("#page-preloaded-export").html(' ');
-	
-	});
-
-
-
 
 });

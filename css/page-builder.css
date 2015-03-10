@@ -109,10 +109,12 @@ body {
 	overflow: hidden;
 	width: 100%;
 	float: left;
+	height:100vh;
 }
 #page-builder-sidebar{
 	float: left;
-	width: 250px;
+	width: 450px;
+	height: 100%;
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -275,22 +277,20 @@ body {
 	margin-right: 10px;
 }
 .page-builder-area-center-frame-buttons-content {
-	height: 500px;
-	width: 690px;
 	background-color: rgba(70,70,70,1);
 	position: absolute;
-	left: 110px;
 	z-index: 1;
 	cursor: default;
 	overflow-y: scroll;
 	padding-bottom: 50px;
-	display: none;
+	display: block;
 }
 .page-builder-area-center-frame-buttons-content-tab {
 	float: left;
-	width: 590px;
-	margin-left: 50px;
-	margin-top: 50px;
+	max-width: 500px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 20px;
 	position: relative;
 }
 .page-builder-area-center-frame-buttons-content-tab:hover img{
@@ -301,7 +301,7 @@ body {
 	}
 .page-builder-area-center-frame-buttons-content-tab img {
 	float: left;
-	width: 590px;
+	max-width: 400px;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	-o-transition: all 0.5s;
@@ -310,12 +310,12 @@ body {
 .page-builder-area-center-frame-buttons-content-tab-add {
 	height: 30px;
 	width: 100px;
-	background-color: rgba(70,70,70,1);
+	background-color: rgba(255,230,150,1);
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	float: left;
-	margin-top: -15px;
+	/*margin-top: -15px;*/
 	margin-left: -50px;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
@@ -324,14 +324,19 @@ body {
 	z-index: 2;
 	opacity: 0;
 	text-align: center;
+	padding-top:10px;
+
 }
 .page-builder-area-center-frame-buttons-content-tab-add:hover {
-	background-color: rgba(0,0,0,1);
+	background-color: rgba(255,230,150,1);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 	cursor: pointer;
 }
-#page-builder-area-center-frame-buttons-reset {
+#page-builder-area-center-frame-buttons-reset, #page-builder-area-center-frame-buttons-save {
 	height: 30px;
-	margin-right: auto;
+	margin-right: 10px;
 	margin-left: auto;
 	text-align: center;
 	line-height: 30px;
@@ -348,7 +353,7 @@ body {
 	float: right;
 	background-color: rgba(255,255,255,0.8);
 }
-#page-builder-area-center-frame-buttons-reset a{
+#page-builder-area-center-frame-buttons-reset a, #page-builder-area-center-frame-buttons-save a{
 	padding-right: 15px;
 	padding-left: 15px;
 	display: block;
